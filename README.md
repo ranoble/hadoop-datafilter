@@ -18,7 +18,7 @@ Compilation
 	- Get the repo
 	- Import the project
 	- Convert to a Maven project
-	- Run as maven project (type in Package as Goal)
+	- Run as maven project (type in `package` as Goal)
 	- copy to your vagrant directory
 	- replace the hadoop-filter.jar jar
 
