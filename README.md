@@ -17,10 +17,11 @@ Compilation
 	- Install m2e
 	- Get the repo
 	- Import the project
-	- Convert to a Maven project
+	- Convert to a Maven project (Configure > Convert to Maven)
 	- Run as maven project (type in `package` as Goal)
-	- copy to your vagrant directory
-	- replace the hadoop-filter.jar jar
+	- [local machine] cp target/hadoop-0.0.1-SNAPSHOT.jar vagrant/  
+	- [in vagrant] cp /vagrant/hadoop-0.0.1-SNAPSHOT.jar /opt/hadoop/hadoop-filter.jar
+	*note the version number for the jar
 
 Usage
 =====
