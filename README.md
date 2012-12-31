@@ -63,5 +63,5 @@ Obviously you will need to push some actual data for the job to run on:
 	-	./hadoop/bin/hadoop dfs -put <local> <hdfs>
 	
 On occasion, you may want to set a file as part of the distributed cache, in this case, 
-you would put the file on the 
+you would put the file on the HDFS FileSystem and configure it as part of the cache.
 
