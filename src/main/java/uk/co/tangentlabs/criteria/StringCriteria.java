@@ -3,19 +3,22 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.hadoop.io.MapWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.io.Writable;
 
 
 public class StringCriteria implements Criteria {
 	List<String> values;
-	String attribute;
+	Text attribute;
 	
 	public StringCriteria(String attribute, List<String> list){
-		this.attribute = attribute;
+		this.attribute = new Text(attribute);
 		this.values = list;
 	}
 
 	public boolean matches(MapWritable record) {
-		if (values.contains(record.get(this.attribute)))
+		Writable attributeValue = record.get(this.attribute);
+		if (values.contains(attributeValue.toString()))
 			return true;
 		return false;
 	}

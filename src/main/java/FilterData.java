@@ -34,8 +34,6 @@ public class FilterData {
 	}
 
 	public static List<Criteria> getChecks(String key) {
-		if (FilterData._checks != null)
-			return FilterData._checks.get(key);
 
 		Map<String, List<Criteria>> _checks = new HashMap<String, List<Criteria>>();
 
@@ -44,10 +42,8 @@ public class FilterData {
 		StringCriteria crit = new StringCriteria("mosaic", values);
 		List<Criteria> criteriaList = new ArrayList<Criteria>();
 		criteriaList.add(crit);
-		_checks.put("WPC", criteriaList);
-		FilterData._checks = _checks;
 
-		return _checks.get(key);
+		return criteriaList;
 	}
 
 	public static String getKeyAttribute() {
